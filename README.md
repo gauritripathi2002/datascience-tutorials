@@ -11,13 +11,13 @@ https://www.becloudready.com/forum/resources/installation-and-setup-of-anaconda-
 
 ## This contains code for following courses
 
-# Python for Analytics
+### Python for Analytics
 
-https://www.becloudready.com/forum/resources/python-for-data-analytics
+Course content: https://www.becloudready.com/forum/resources/python-for-data-analytics
 
-# Advanced Machine Learning with Python
+### Advanced Machine Learning with Python
 
-https://www.becloudready.com/forum/resources/advanced-data-science-machine-learning-in-python
+Course content: https://www.becloudready.com/forum/resources/advanced-data-science-machine-learning-in-python
 
 ### lab-01
 
