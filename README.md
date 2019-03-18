@@ -24,7 +24,10 @@ Course content: https://www.becloudready.com/forum/resources/advanced-data-scien
 Example for for Day 1 of Python for analytics
 
 ### lab-02
-Example for for Day 1 of Python for analytics### lab-03
+Example for for Day 1 of Python for analytics
+
+
+
 
 ## Q&A
 
