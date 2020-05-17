@@ -28,5 +28,5 @@ Example for for Day 1 of Python for analytics
 
 ## Q&A
 
-https://www.becloudready.com/forum/questions
+https://www.facebook.com/groups/1160430364089898/?source_id=690762831076457
 
