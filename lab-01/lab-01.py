@@ -3,9 +3,12 @@ import pandas as pd
 import csv
 import os
 
+data_dir = 'E:\\TR\\sample_data'
+sample_file_1 = 'Sample_csv_File_V2.csv'
+
 os.getcwd()
 
-os.chdir('E:\\TR\\sample_data')
+os.chdir(data_dir)
 
 os.getcwd()
 
@@ -43,7 +46,7 @@ print(np.sum(x, axis=1))  # Compute sum of each row; prints "[3 7]"
 
 
 
-newdata = pd.read_csv('E:\\Shailendra\\Personal\\TR\\sample_data\\Sample_csv_File_V1.csv')
+newdata = pd.read_csv(os.path.join(data_dir,sample_file_1))
 
 #checking the data
 
@@ -64,9 +67,9 @@ print(newdata.columns) # prints the column names
 
 # reading a csv file with options
 
-newdata1 = pd.read_csv('E:\\Shailendra\\Personal\\TR\\sample_data\\Sample_csv_File_V2.csv')
+newdata1 = pd.read_csv(os.path.join(data_dir,sample_file_1))
 
-newdata1 = pd.read_csv('E:\\Shailendra\\Personal\\TR\\sample_data\\Sample_csv_File_V2.csv',dtype=str, delimiter='|')
+newdata1 = pd.read_csv(os.path.join(data_dir,sample_file_1),dtype=str, delimiter='|')
 
 newdata1.dtypes
 
