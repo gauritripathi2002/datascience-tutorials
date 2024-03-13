@@ -8,7 +8,7 @@ import os
 
 os.getcwd()
 
-os.chdir('E:\\Shailendra\\Personal\\TR\\sample_data')
+#os.chdir('E:\\Shailendra\\Personal\\TR\\sample_data')
 
 os.getcwd()
 
@@ -46,7 +46,7 @@ print(np.sum(x, axis=1))  # Compute sum of each row; prints "[3 7]"
 
 
 
-newdata = pd.read_csv('E:\\Shailendra\\Personal\\TR\\sample_data\\Sample_csv_File_V1.csv')
+newdata = pd.read_csv('C:\\Users\\gauri\\Desktop\\data_science\\datascience-tutorials\\datasets')
 
 #checking the data
 
@@ -67,9 +67,9 @@ print(newdata.columns) # prints the column names
 
 # reading a csv file with options
 
-newdata1 = pd.read_csv('E:\\Shailendra\\Personal\\TR\\sample_data\\Sample_csv_File_V2.csv')
+newdata1 = pd.read_csv("C:\\Users\\gauri\\Desktop\\data_science\\datascience-tutorials\\datasets\\Exercise_Part_1.csv")
 
-newdata1 = pd.read_csv('E:\\Shailendra\\Personal\\TR\\sample_data\\Sample_csv_File_V2.csv',dtype=str, delimiter='|')
+newdata1 = pd.read_csv("C:\\Users\\gauri\\Desktop\\data_science\\datascience-tutorials\\datasets\\Exercise_Part_1.csv",dtype=str, delimiter='|')
 
 newdata1.dtypes
 
