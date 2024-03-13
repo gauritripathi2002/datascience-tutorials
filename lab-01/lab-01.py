@@ -3,8 +3,9 @@ import pandas as pd
 import csv
 import os
 
-data_dir = "C:\\Users\\gauri\\Desktop\\dpgpt\\datascience-tutorials"
-sample_file_1 = "C:\\Users\\gauri\\Desktop\\data_science\\datascience-tutorials\\datasets\\Exercise_Part_1.csv"
+data_dir = 'C:\\Users\\gauri\\Desktop\\gitdatascience\\datascience-tutorials\\datasets'
+
+sample_file_1 =  '\\Exercise_Part_1.csv'
 os.getcwd()
 
 os.chdir(data_dir)
