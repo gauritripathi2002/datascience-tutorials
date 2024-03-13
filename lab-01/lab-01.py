@@ -5,13 +5,15 @@ import os
 
 data_dir = 'C:\\Users\\gauri\\Desktop\\gitdatascience\\datascience-tutorials\\datasets'
 
-sample_file_1 =  '\\Exercise_Part_1.csv'
-os.getcwd()
+#sample_file_1 =  '\\Exercise_Part_1.csv'
+sample_csv_v1 = os.path.join(data_dir, 'Exercise_Part_1.csv')
+sample_csv_v2 = os.path.join(data_dir, 'Exercise_Part_2.csv')
+"""os.getcwd()
 
 os.chdir(data_dir)
 
-os.getcwd()
-
+os.getcwd()"""
+os.chdir(data_dir)
 
 #Numpy for array maths
 x = np.array([[1,2],[3,4]], dtype=np.float64)
@@ -46,7 +48,7 @@ print(np.sum(x, axis=1))  # Compute sum of each row; prints "[3 7]"
 
 
 
-newdata = pd.read_csv(os.path.join(data_dir,sample_file_1))
+newdata = pd.read_csv(sample_csv_v1)
 
 #checking the data
 
@@ -67,9 +69,9 @@ print(newdata.columns) # prints the column names
 
 # reading a csv file with options
 
-newdata1 = pd.read_csv(os.path.join(data_dir,sample_file_1))
+newdata1 = pd.read_csv(sample_csv_v1)
 
-newdata1 = pd.read_csv(os.path.join(data_dir,sample_file_1),dtype=str, delimiter='|')
+newdata1 = pd.read_csv(sample_csv_v1,dtype=str, delimiter='|')
 
 newdata1.dtypes
 
