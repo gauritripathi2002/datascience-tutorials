@@ -3,14 +3,19 @@ import pandas as pd
 import csv
 import os
 
-data_dir = "C:\\Users\\gauri\\Desktop\\dpgpt\\datascience-tutorials"
-sample_file_1 = "C:\\Users\\gauri\\Desktop\\data_science\\datascience-tutorials\\datasets\\Exercise_Part_1.csv"
-os.getcwd()
+data_dir = 'C:\\Users\\gauri\\Desktop\\data-science-tutorials\\datascience-tutorials\\datasets'
+
+#sample_file_1 =  '\\Exercise_Part_1.csv'
+sample_csv_v1 = os.path.join(data_dir, 'Exercise_Part_1.csv')
+sample_csv_v2 = os.path.join(data_dir, 'Exercise_Part_2.csv')
+"""os.getcwd()
 
 os.chdir(data_dir)
 
-os.getcwd()
+os.getcwd()"""
 
+
+os.chdir(data_dir)
 
 #Numpy for array maths
 x = np.array([[1,2],[3,4]], dtype=np.float64)
@@ -23,13 +28,6 @@ print(x + y)
 #with numpy
 print(np.add(x, y))
 
-
-
-#Python standard working
-print(x + y)
-
-#with numpy
-print(np.add(x, y))
 
 #Where numpy saves time and makes codes simple
 x = np.array([[1,2],[3,4]])
@@ -45,19 +43,20 @@ print(np.sum(x, axis=1))  # Compute sum of each row; prints "[3 7]"
 
 
 
-newdata = pd.read_csv(os.path.join(data_dir,sample_file_1))
+newdata = pd.read_csv(sample_csv_v1)
 
 #checking the data
 
 
 #gives stats about numerical variables
 checkingdata = newdata.describe()
+print(checkingdata)
 
 #allows us to view first X observations
-newdata.head()
+print(newdata.head())
 
 #getting frequency table of a single variable
-newdata['OFFERCODE_'].value_counts()
+newdata['age'].value_counts()
 
 
 
@@ -66,45 +65,46 @@ print(newdata.columns) # prints the column names
 
 # reading a csv file with options
 
-newdata1 = pd.read_csv(os.path.join(data_dir,sample_file_1))
+newdata1 = pd.read_csv(sample_csv_v1)
 
-newdata1 = pd.read_csv(os.path.join(data_dir,sample_file_1),dtype=str, delimiter='|')
+newdata1 = pd.read_csv(sample_csv_v1,dtype=str)
 
-newdata1.dtypes
+print(newdata1.dtypes)
 
-newdata1['DateofEvaluation']=pd.to_datetime(newdata1['DateofEvaluation'], format="%m/%d/%y")
- 
-
+#newdata1['DateofEvaluation']=pd.to_datetime(newdata1['DateofEvaluation'], format="%m/%d/%y")
+newdata1.info()
+''
 #Changing the data type of a variable after reading a file
-newdata1.Revenue = newdata1.Revenue.astype(float)
+newdata1.duration = newdata1.duration.astype(float)
 
-newdata1.Revenue = newdata1.Revenue.astype(int)
+newdata1.duration = newdata1.duration.astype(int)
 
-newdata1.dtypes
+print(newdata1.dtypes)
 
-newdata1['OFFERCODE_'].unique() # calulating the unique rows
+
+newdata1['duration'].unique() # calulating the unique rows
 
 
 #Group by 
 
 
-newdata1.agg({'Revenue':'mean'})
+newdata1.agg({'duration':'mean'})
 
 
 
-print(newdata1['Revenue'].mean())
+print("The mean for the column is",newdata1['duration'].mean())
 
-print(newdata1['Revenue'].median())
+print("The median for the column is",newdata1['duration'].median())
 
-print(newdata1['OFFERCODE_'].mode())
+print("The mode for the column is",newdata1['duration'].mode())
 
-print(newdata1['Revenue'].std())
+print("The standard deviation for the column is",newdata1['duration'].std())
 
-print(newdata1['OFFERCODE_'].count())
+print("The count for the column is",newdata1['duration'].count())
 
 
-pntl = np.percentile(newdata1['Revenue'], [10,20,30,40,50,60,70,80,90,100], axis =0)
-
+pntl = np.percentile(newdata1['duration'], [10,20,30,40,50,60,70,80,90,100], axis =0)
+print('The pntl is', pntl)
 
 
 #Defining a function
@@ -141,3 +141,24 @@ def my_function(fname):
 my_function("Bo")
 my_function("Chandan")
 my_function("Shailendra")
+
+#Example 3
+def sum(a,b):
+	"""this fuction returns the sum of two numbers"""
+	print("The sum of two numbers is:",a + b)
+	
+sum(9,18)
+
+#Example 4
+def reversed_list(list):
+	return list[::-1]
+
+my_list = [3,5,6,7,8,43,26,6,99]
+reverse_list= reversed_list(my_list)
+print(reverse_list)
+
+#Example 5
+def mean(a,b,c,d,e):
+	print("The mean for the numbers are",a+b+c+d+e/5)
+
+mean(2,5,7,8,4)
