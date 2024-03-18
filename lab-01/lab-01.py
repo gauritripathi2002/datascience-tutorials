@@ -14,7 +14,6 @@ os.chdir(data_dir)
 
 os.getcwd()"""
 
-
 os.chdir(data_dir)
 
 #Numpy for array maths
